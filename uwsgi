@@ -1,0 +1,2 @@
+#!/bin/bash
+uwsgi -s uwsgi.sock --file server.py --callable app --master --enable-threads --processes=2 --threads=2 --chmod-socket=666

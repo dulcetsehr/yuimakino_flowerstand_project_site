@@ -1,0 +1,16 @@
+{
+  "dev": {
+    "DEBUG": true,
+    "SESSION_SECRET_KEY": "",
+    "SESSION_PASSWORD_SECRET_KEY": "",
+    "RDB_CONNECTION_STRING": "",
+    "FLASK_PORT": 8525
+  },
+  "real": {
+    "DEBUG": false,
+    "SESSION_SECRET_KEY": "",
+    "SESSION_PASSWORD_SECRET_KEY": "",
+    "RDB_CONNECTION_STRING": "",
+    "FLASK_PORT": 8525
+  }
+}

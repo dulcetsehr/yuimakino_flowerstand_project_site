@@ -1,0 +1,135 @@
+{% extends '_common.html' %}
+{% block body %}
+<section class="container">
+  <p class="text-center"><img src="{{ url_for('static', filename='images/01.jpg') }}"></p>
+  <div class="title">
+    <h1>여러분, 너무나도 감사합니다.</h1>
+    <p>우리들의 하나하나의 응원이, 그분에게 커다란 응원이 되어 다가왔다고, 저는 생각합니다.</p>
+    <p><a href="http://news.mynavi.jp/articles/2016/10/19/makinoyui/001.html" target="_blank">[관련 일본 기사 보기]</a> 기사 중에, &quot;한국에서 화환을 보내주었어요!&quot;라는 대목이 있습니다.</p>
+    <blockquote>
+      <p>아, 정말로 감사하게도, 라이브를 개최할 때마다 팬 분들이 보내주시는 화환을 받게 되는데, 저번에는 놀랍게도 "한국의 팬 분들에게서도 화환이 온 겁니다"!</p>
+      <p>이건, 여러 국적이 다른 분들도 제 라이브를 봐주셨기 때문에, 「그 분들과도 만날 수 있었다」는, 증거가 되지 않았는가, 하고 생각합니다.</p>
+    </blockquote>
+    <p>여러분의 이 감사한 응원이, 마키노유이씨에게도, 또 다른 응원으로써 와닿았다는 증거가 되지 않았을까 합니다.</p>
+    <p>그렇기에, 저는 또 다시 이 분을 응원하고 싶습니다. 2017년 1월 22일의, 본인의 단독 라이브의 화환 프로젝트 입니다.</p>
+  </div>
+  <fieldset>
+    <legend>화환 프로젝트의 개요</legend>
+    <p>2017년 1월 22일(일), 마키노유이 단독 라이브의 개최가 공개되었습니다(<a href="https://twitter.com/makino_niceeeeY/status/790101562987208704" target="_blank">[관련 링크]</a>).</p>
+    <p>이에 따라, 이전과 동일하게, 마키노유이를 응원하는 한국 팬 일동으로 축하 화환을 보내고자 합니다.</p>
+    <p>여러분의 힘이 없이 이루어질 수 없었던 2015년 8월 10일의 화환 프로젝트였으므로, 이번에도 여러분의 응원을 부디 그분께 전달하고자 합니다.</p>
+  </fieldset>
+  <fieldset>
+    <legend>참가 방법 및 문의</legend>
+    <p>2017년 1월 22일(일), 일본 도쿄 에비스 가든홀(恵比寿ザ・ガーデンホール)에서 열리는, 牧野由依単独コンサート(가제)에 화환을 보낼 예정입니다.</p>
+    <p>화환은 이전과 동일하게 http://www.biz-hana.com/lp/rack.html 에서 선택할 예정을 하고 있습니다만, 주문 전까지는 더 좋은 방안이 생긴다면, 해당 방안으로 진행해보려 합니다.</p>
+    <p>또한 메시지보드를 추가로 주문하여, 한국의 마키노유이 팬 일동(韓国の牧野由依ファン有志一同)의 이름으로 참가하신 분의 닉네임을 기록하여 화환에 함께 기재할 예정입니다.</p>
+    <p>모금은 최소 <strong>10,000원(혹은 1000엔)</strong> 부터로 진행하고자 합니다. 더 보내주셔도 좋지만, 무리하시지 않고 그 마음을 표현할 수 있는 금액으로도 충분하다고 생각합니다.</p>
+    <p>마키노유이의 팬, 마키노유이를 최근에 (아이돌마스터신데렐라걸즈의 사쿠마마유역, 최근에 데레4th에서도 활약하셨죠) 알게 되신 분, 이제부터라도 알아가고 싶은 분들 등등, 본 기획에 참가하고 싶으신 어느 누구라도 환영합니다.</p>
+    <p>모금을 원하시는 분은, 아래의 폼을 통해 신청을 진행해주시면 됩니다.</p>
+    <p>신청 이후 변경은 본 홈페이지에서도 가능하지만, 개인적으로 연락이 필요하신 분은 트위터 <a href="https://twitter.com/purely_m" target="_blank">@purely_m</a> 및 개인 이메일 dulcetsehr[at]gmail.com 으로 연락 부탁드립니다(이메일은 스팸 대책을 위해 [at]으로 기록하였으니 @ 으로 변환하여 연락 부탁드립니다).</p>
+  </fieldset>
+  <fieldset>
+    <legend>입금 은행 정보</legend>
+    <dl class="dl-horizontal">
+      <dt>한국 계좌번호</dt>
+      <dd>우리은행 1002-542-963407 김혜강</dd>
+      <dt>일본 계좌번호</dt>
+      <dd>じぶん銀行(0039)　むらさき支店(107)　普通口座　３５３６９２１　キム ヘガン</dd>
+      <dt>입금액</dt>
+      <dd><strong>KRW 10,000원, 혹은 JPY 1000엔</strong> 이상으로 부탁드립니다.</dd>
+      <dt>입금 기한</dt>
+      <dd>2017년 1월 6일(금) 까지 부탁드립니다.</dd>
+    </dl>
+  </fieldset>
+  <fieldset id="join-form">
+    {% raw %}<legend>{{ data.idx > 0 ? '참가 정보 수정' : '화환 참가 폼' }}</legend>
+    <form class="form-horizontal" ng-submit="submit(data)">
+      <div class="form-group">
+        <label for="inputNickname" class="col-sm-2 control-label">닉네임</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputNickname" placeholder="닉네임" ng-model="data.nickname">
+          <span class="help-block">편의상 사용하시는 닉네임입니다. 정보수정 때 닉네임과 비밀번호로 본인 확인을 합니다.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputBoardname" class="col-sm-2 control-label">보드 기록 이름</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputBoardname" placeholder="보드 기록 이름" ng-model="data.boardname">
+          <span class="help-block">화환 보드에 기록할 닉네임입니다. 화환 보드에 직접 작성되는 닉네임인 만큼 일본어/알파벳으로 부탁드립니다.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputBankname" class="col-sm-2 control-label">입금자명</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputBankname" placeholder="입금자명" ng-model="data.bankname">
+          <span class="help-block">은행에 입금해주시는 입금자명입니다. 입금자명은 실명이 아니셔도 되지만 여기에 적은 이름과 일치하도록 기입 부탁드립니다.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPrice" class="col-sm-2 control-label">입금 예상 금액</label>
+        <div class="col-sm-10">
+          <input type="number" class="form-control" id="inputPrice" placeholder="입금 예상 금액(숫자만)" ng-model="data.price">
+          <span class="help-block">동명이인이거나 혹은 입금자명을 변경하게 되면서(e.g. 사쿠마마유) 입금자명이 겹칠 수 있으므로, 예상금액까지 같이 적어주시면 파악하는데 도움이 될 것 같습니다.<br>KRW(원)든 JPY(엔)든 관계 없이, 숫자만 적어주시면 제가 알아서 판단하겠습니다.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputContactNumber" class="col-sm-2 control-label">연락처</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="inputContactNumber" placeholder="연락처" ng-model="data.contact_number">
+          <span class="help-block">여러 변동사항이 생겼을 때 연락드릴 수 있는 연락처입니다. 트위터 혹은 이메일 주소 등을 적어주세요.</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-2 control-label">{{ data.idx > 0 ? '새 ':'' }}비밀번호</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword" placeholder="비밀번호" ng-model="data.password">
+          <span class="help-block">정보 수정이나, 철회 하고 싶을 때 사용할 수 있는 비밀번호입니다. 암호화하여 저장하므로 안심하십시오(?).</span>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">{{ data.idx > 0 ? '수정' : '등록' }}</button>
+          <button type="button" class="btn btn-default" ng-show="data.idx > 0" ng-click="cancel()">수정 취소</button>
+          <button type="button" class="btn btn-danger" style="margin-left: 20px" ng-show="data.idx > 0" ng-click="remove(data)">참가철회</button>
+        </div>
+      </div>{% endraw %}
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" class="btn btn-info" ng-click="edit()">등록한 정보를 수정하시고 싶으시다면</button>
+        </div>
+      </div>
+    </form>
+  </fieldset>
+</section>
+
+<form id="edit-popup" class="modal fade form-horizontal" tabindex="-1" role="dialog" ng-submit="submit2(edata)">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">참가 정보 수정</h4>
+      </div>
+      <div class="modal-body">
+        <p>참가 당시 작성해주신 닉네임 및 비밀번호를 입력해주세요.</p>
+        <div class="form-group">
+          <label for="inputNickname2" class="col-sm-2 control-label">닉네임</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputNickname2" placeholder="닉네임" ng-model="edata.nickname">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword2" class="col-sm-2 control-label">비밀번호</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword2" placeholder="비밀번호" ng-model="edata.password">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+        <button type="submit" class="btn btn-primary">정보수정</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</form><!-- /.modal -->
+{% endblock %}
